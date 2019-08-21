@@ -10,3 +10,6 @@ Repositorio con el código del [Curso Avanzado de React de Platzi](https://platz
 
 
 `node dist/main.js`
+https://curso-platzi-react-avanzado.didaquis.now.sh
+
+https://petgram-curso-platzi-react-avanzado.didaquis.now.sh 
