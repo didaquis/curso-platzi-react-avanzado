@@ -29,7 +29,7 @@ export const GlobalStyle = createGlobalStyle`
 		height: 100vh;
 		margin: 0 auto;
 		max-width: 500px;
-		overscroll-behavior: none;
+		overscroll-behavior: none; /* Safari doesn't have support! :-( */
 		width: 100%;
 	}
 
