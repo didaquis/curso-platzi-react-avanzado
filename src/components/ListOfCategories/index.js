@@ -1,20 +1,31 @@
 import React, { Fragment, useEffect, useState } from 'react'
 
 import { Category } from '../Category'
+import { Spinner } from '../Spinner'
 
 import { List, Item } from './styles'
 
-export const ListOfCategories = ( ) => {
+function useCategoriesData () { /* This is a custom hook! */
 	const [categories, setCategories] = useState([])
-	const [showFixed, setShowFixed] = useState(false)
+	const [loading, setLoading] = useState(false)
 
 	useEffect(function () {
+		setLoading(true)
+
 		window.fetch('https://curso-platzi-react-avanzado.didaquis.now.sh/categories')
 			.then(res => res.json())
 			.then(response => {
 				setCategories(response)
+				setLoading(false)
 			})
 	}, []) /* Remember: if you don't use second parameter of useEffect, the useEffect can force a loop of rendering! */
+
+	return { categories, loading }
+}
+
+export const ListOfCategories = () => {
+	const { categories, loading } = useCategoriesData()
+	const [showFixed, setShowFixed] = useState(false)
 
 	useEffect(function () {
 		const onScroll = () => {
@@ -33,7 +44,9 @@ export const ListOfCategories = ( ) => {
 	const renderList = (fixed) => (
 		<List fixed={fixed}>
 			{
-				categories.map(category => <Item key={category.id}><Category {...category} /></Item>)
+				loading
+					? <Spinner key={'loading'} />
+					: categories.map(category => <Item key={category.id}><Category {...category} /></Item>)
 			}
 		</List>
 	)
