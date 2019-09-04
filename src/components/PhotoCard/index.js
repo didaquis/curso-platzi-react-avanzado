@@ -15,15 +15,18 @@ export const PhotoCard = ( { id, likes = 0, src = DEFAULT_IMAGE } ) => {
 
 	const element = useRef(null)
 	useEffect(function () {
-		const observer = new window.IntersectionObserver(function (entries) {
-			const { isIntersecting } = entries[0]
-			if (isIntersecting) {
-				setShow(true)
-				observer.disconnect()
-			}
-		})
+		import('intersection-observer') // import dinámico. Lo usamos para cargar el polyfill y obtener soporte para IE11
+			.then(() => {
+				const observer = new window.IntersectionObserver(function (entries) {
+					const { isIntersecting } = entries[0]
+					if (isIntersecting) {
+						setShow(true)
+						observer.disconnect()
+					}
+				})
 
-		observer.observe(element.current)
+				observer.observe(element.current)
+			})
 	}, [element])
 
 	return (
