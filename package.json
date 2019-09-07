@@ -1,6 +1,6 @@
 {
   "name": "curso-platzi-react-avanzado",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "Repositorio con el código del [Curso Avanzado de React de Platzi](https://platzi.com/cursos/react-avanzado/)",
   "main": "index.js",
   "scripts": {
@@ -36,8 +36,11 @@
     "wepack-cli": "0.0.1-security"
   },
   "dependencies": {
+    "apollo-boost": "^0.4.4",
+    "graphql": "^14.5.4",
     "intersection-observer": "^0.7.0",
     "react": "^16.9.0",
+    "react-apollo": "^3.1.0",
     "react-dom": "^16.9.0",
     "react-icons": "^3.7.0",
     "styled-components": "^4.3.2"
