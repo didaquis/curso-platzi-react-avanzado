@@ -1,6 +1,6 @@
 {
   "name": "curso-platzi-react-avanzado",
-  "version": "0.0.28",
+  "version": "0.0.29",
   "description": "Repositorio con el código del [Curso Avanzado de React de Platzi](https://platzi.com/cursos/react-avanzado/)",
   "main": "index.js",
   "scripts": {
@@ -30,14 +30,14 @@
     "eslint": "^6.3.0",
     "eslint-plugin-react": "^7.14.3",
     "html-webpack-plugin": "^3.2.0",
-    "webpack": "^4.39.3",
+    "webpack": "^4.40.2",
     "webpack-cli": "^3.3.8",
     "webpack-dev-server": "^3.8.0",
     "wepack-cli": "0.0.1-security"
   },
   "dependencies": {
     "apollo-boost": "^0.4.4",
-    "graphql": "^14.5.4",
+    "graphql": "^14.5.5",
     "intersection-observer": "^0.7.0",
     "react": "^16.9.0",
     "react-apollo": "^3.1.0",
