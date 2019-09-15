@@ -1,11 +1,11 @@
 {
   "name": "curso-platzi-react-avanzado",
-  "version": "0.1.31",
+  "version": "0.1.32",
   "description": "Repositorio con el código del [Curso Avanzado de React de Platzi](https://platzi.com/cursos/react-avanzado/)",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack-dev-server",
+    "dev": "webpack-dev-server --history-api-fallback",
     "lint": "eslint --ext .js .",
     "now-build": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -36,6 +36,7 @@
     "wepack-cli": "0.0.1-security"
   },
   "dependencies": {
+    "@reach/router": "^1.2.1",
     "apollo-boost": "^0.4.4",
     "graphql": "^14.5.5",
     "intersection-observer": "^0.7.0",
