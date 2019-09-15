@@ -16,8 +16,6 @@ export const PhotoCard = ( { id, likes = 0, src = DEFAULT_IMAGE } ) => {
 	const key = `like-${id}`
 	const [liked, setLiked] = useLocalStorage(key, false)
 
-	const handleFavClick = () => setLiked(!liked)
-
 	return (
 		<Article ref={element}>
 			{
