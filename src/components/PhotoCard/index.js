@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { Link } from '@reach/router'
 
 import { ImgWrapper, Image, Article } from './styles'
 
@@ -20,11 +21,11 @@ export const PhotoCard = ( { id, likes = 0, src = DEFAULT_IMAGE } ) => {
 		<Article ref={element}>
 			{
 				show && <Fragment>
-					<a href={`/?detail=${id}`}>
+					<Link to={`/detail/${id}`}>
 						<ImgWrapper>
 							<Image src={src}/>
 						</ImgWrapper>
-					</a>
+					</Link>
 
 					<ToogleLikeMutation>
 						{
