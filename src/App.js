@@ -12,6 +12,10 @@ import { NavBar } from './components/NavBar'
 
 import { GlobalStyle } from './styles/GlobalStyles'
 
+const UserLogged = ( { children }) => {
+	return children({ isAuth: false })
+}
+
 export const App = () => {
 	return (
 		<Fragment>
@@ -21,9 +25,23 @@ export const App = () => {
 				<Home path='/' />
 				<Home path='/pet/:id' />
 				<Detail path='/detail/:detailId' />
-				<Favs path='/favs' />
-				<User path='/user' />
 			</Router>
+
+			<UserLogged>
+				{
+					({isAuth}) =>
+						isAuth
+							? <Router>
+								<Favs path='/favs' />
+								<User path='/user' />
+							</Router>
+							: <Router>
+								<NotRegisteredUser path='/favs' />
+								<NotRegisteredUser path='/user' />
+							</Router>
+				}
+			</UserLogged>
+
 			<NavBar />
 		</Fragment>
 	)
