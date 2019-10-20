@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import { Router } from '@reach/router'
+import Context from './Context'
 
 import { Home } from './pages/Home'
 import { Detail } from './pages/Detail'
@@ -12,9 +13,6 @@ import { NavBar } from './components/NavBar'
 
 import { GlobalStyle } from './styles/GlobalStyles'
 
-const UserLogged = ( { children }) => {
-	return children({ isAuth: false })
-}
 
 export const App = () => {
 	return (
@@ -27,7 +25,7 @@ export const App = () => {
 				<Detail path='/detail/:detailId' />
 			</Router>
 
-			<UserLogged>
+			<Context.Consumer>
 				{
 					({isAuth}) =>
 						isAuth
@@ -40,7 +38,7 @@ export const App = () => {
 								<NotRegisteredUser path='/user' />
 							</Router>
 				}
-			</UserLogged>
+			</Context.Consumer>
 
 			<NavBar />
 		</Fragment>
