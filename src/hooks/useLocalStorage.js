@@ -15,7 +15,7 @@ export function useLocalStorage (key, initialValue) {
 			window.localStorage.setItem(key, JSON.stringify(value))
 			setValue(value)
 		} catch (e) {
-			console.error(e)
+			console.error(e) // eslint-disable-line no-console
 		}
 	}
 
