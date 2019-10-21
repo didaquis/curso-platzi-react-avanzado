@@ -10,10 +10,15 @@ export const UserForm = ({ onSubmit, title }) => {
 	const email = useInputValue('')
 	const password = useInputValue('')
 
+	const handleSubmit = (event) => {
+		event.preventDefault()
+		onSubmit({ email: email.value, password: password.value })
+	}
+
 	return (
 		<Fragment>
 			<Title>{title}</Title>
-			<Form onSubmit={onSubmit}>
+			<Form onSubmit={handleSubmit}>
 				<Input placeholder='Email' {...email} required autoFocus />
 				<Input placeholder='Contraseña' type='password' {...password} required />
 				<Button>{title}</Button>
