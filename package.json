@@ -1,6 +1,6 @@
 {
   "name": "curso-platzi-react-avanzado",
-  "version": "0.2.47",
+  "version": "0.2.48",
   "description": "Repositorio con el código del [Curso Avanzado de React de Platzi](https://platzi.com/cursos/react-avanzado/)",
   "main": "index.js",
   "scripts": {

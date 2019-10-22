@@ -20,7 +20,9 @@ export const NotRegisteredUser = () => {
 										const onSubmit = ({ email, password }) => {
 											const input = { email, password }
 											const variables = { input }
-											register({ variables }).then(activateAuth)
+											register({ variables }).then(activateAuth).catch(e => {
+												console.error(e.message) // eslint-disable-line no-console
+											})
 										}
 
 										const errorMsg = error && 'El usuario ya existe o hay algún problema.'
@@ -36,7 +38,9 @@ export const NotRegisteredUser = () => {
 										const onSubmit = ({ email, password }) => {
 											const input = { email, password }
 											const variables = { input }
-											login({ variables }).then(activateAuth)
+											login({ variables }).then(activateAuth).catch(e => {
+												console.error(e.message) // eslint-disable-line no-console
+											})
 										}
 
 										const errorMsg = error && 'Las credenciales no son correctas.'
