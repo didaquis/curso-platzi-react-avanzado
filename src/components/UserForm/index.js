@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import { SubmitButton } from '../SubmitButton'
 import { useInputValue } from '../../hooks/useInputValue'
 
-import { PageTitle } from '../components/PageTitle'
+import { PageTitle } from '../PageTitle'
 
 import { Form, Input, Error } from './styles'
 
