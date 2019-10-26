@@ -16,7 +16,7 @@ export const NotRegisteredUser = () => {
 		<Fragment>
 			<RegisterMutation>
 				{
-					(register, { data, loading, error }) => {
+					(register, { data, loading, error }) => { // eslint-disable-line no-unused-vars
 						const onSubmit = ({ email, password }) => {
 							const input = { email, password }
 							const variables = { input }
@@ -37,7 +37,7 @@ export const NotRegisteredUser = () => {
 
 			<LoginMutation>
 				{
-					(login, { data, loading, error }) => {
+					(login, { data, loading, error }) => { // eslint-disable-line no-unused-vars
 						const onSubmit = ({ email, password }) => {
 							const input = { email, password }
 							const variables = { input }
