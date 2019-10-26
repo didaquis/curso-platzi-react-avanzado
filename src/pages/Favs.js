@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react'
 import { FavsWithQuery } from '../containers/GetFavorites'
 
+import { PageTitle } from '../components/PageTitle'
+
 
 export const Favs = () => {
 	return (
 		<Fragment>
-			<h1>
-				Favs
-			</h1>
+			<PageTitle text="Tus favoritos" />
 			<FavsWithQuery />
 		</Fragment>
 	)
