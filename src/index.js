@@ -7,7 +7,24 @@ import Context from './Context'
 import { App } from './App'
 
 const client = new ApolloClient({
-	uri: 'https://curso-platzi-react-avanzado.didaquis.now.sh/graphql'
+	uri: 'https://curso-platzi-react-avanzado.didaquis.now.sh/graphql',
+	request: operation => {
+		const token = window.sessionStorage.getItem('token')
+		const authorization = token ? `Bearer ${token}` : ''
+
+		operation.setContext({
+			headers: {
+				authorization
+			}
+		})
+	},
+	onError: error => {
+		const { networkError } = error
+		if (networkError && networkError.response === 'invalid_token') {
+			window.sessionStorage.removeItem('token')
+			window.location.href = '/'
+		}
+	}
 })
 
 ReactDOM.render(
