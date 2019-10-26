@@ -17,6 +17,6 @@ https://petgram-curso-platzi-react-avanzado.didaquis.now.sh
 Para publicar una nueva versión del frontend: `npm run now-build` y despues `now`.
 
 ```
-// credenciales
+// Ejemplo de credenciales
 example@example.com // example1234
 ```
