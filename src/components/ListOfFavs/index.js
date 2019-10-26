@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { InfoText } from '../InfoText'
+
 import { Link, Grid, Image } from './styles'
 
 
@@ -14,6 +16,9 @@ export const ListOfFavs = ( { favs = [] } ) => {
 						</Link>
 					)
 				})
+			}
+			{
+				!favs.length ? <InfoText text={'Todavía no has marcado ninguna fotografía como favorita'} /> : null
 			}
 		</Grid>
 	)
