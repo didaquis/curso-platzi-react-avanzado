@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import { InfoText } from '../InfoText'
 
@@ -21,5 +22,14 @@ export const ListOfFavs = ( { favs = [] } ) => {
 				!favs.length ? <InfoText text={'Todavía no has marcado ninguna fotografía como favorita'} /> : null
 			}
 		</Grid>
+	)
+}
+
+ListOfFavs.propTypes = {
+	favs: PropTypes.arrayOf(
+		PropTypes.shape({
+			id: PropTypes.string.isRequired,
+			src: PropTypes.string.isRequired
+		})
 	)
 }
