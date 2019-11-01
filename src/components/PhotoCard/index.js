@@ -48,7 +48,7 @@ PhotoCard.propTypes = {
 	likes: function (props, propName, componentName) {
 		const propValue = props[propName]
 
-		if (propValue !== undefined) {
+		if (propValue === undefined) {
 			return new Error(`Error in component: ${componentName}. The ${propName} value must be defined`)
 		}
 
