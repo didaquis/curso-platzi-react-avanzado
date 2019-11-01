@@ -1,6 +1,6 @@
 {
   "name": "curso-platzi-react-avanzado",
-  "version": "0.4.66",
+  "version": "0.4.67",
   "description": "Repositorio con el código del [Curso Avanzado de React de Platzi](https://platzi.com/cursos/react-avanzado/)",
   "main": "index.js",
   "scripts": {
@@ -43,6 +43,7 @@
     "apollo-boost": "^0.4.4",
     "graphql": "^14.5.8",
     "intersection-observer": "^0.7.0",
+    "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-apollo": "^3.1.3",
     "react-dom": "^16.11.0",
