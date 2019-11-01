@@ -1,13 +1,14 @@
 {
   "name": "curso-platzi-react-avanzado",
-  "version": "0.4.63",
+  "version": "0.4.64",
   "description": "Repositorio con el código del [Curso Avanzado de React de Platzi](https://platzi.com/cursos/react-avanzado/)",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint --ext .js .",
     "build": "webpack --mode=production",
     "dev": "webpack-dev-server --history-api-fallback",
-    "lint": "eslint --ext .js .",
     "now-build": "npm run build",
+    "serve:dev": "webpack --mode 'development' && npx serve dist -s",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
