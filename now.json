@@ -12,6 +12,14 @@
       "dest": "/$1.json"
     },
     {
+      "src": "(.*).png",
+      "dest": "/$1.png"
+    },
+    {
+      "src": "(.*).ico",
+      "dest": "/$1.ico"
+    },
+    {
       "src": "/.*",
       "dest": "index.html"
     }
