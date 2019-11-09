@@ -23,3 +23,29 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+
+/* global Cypress */
+
+/**
+ * Generate a pseudo random email address (only leters)
+ * @return {String}                Example: 'jusyhamk@euyia.com'
+ */
+Cypress.Commands.add('randomEmail', () => {
+	const validChars = 'abcdefghijklmnopqrstuvwxyz'
+
+	let randomName = ''
+	const lengthOfName = 8
+	for (let i = 0; i < lengthOfName; i++) {
+		randomName += validChars.charAt(Math.floor(Math.random() * validChars.length))
+	}
+
+	let randomDomain = ''
+	const lengthOfDomain = 5
+	for (let i = 0; i < lengthOfDomain; i++) {
+		randomDomain += validChars.charAt(Math.floor(Math.random() * validChars.length))
+	}
+
+	const fakeEmail = `${randomName}@${randomDomain}.com`
+	return fakeEmail
+})
