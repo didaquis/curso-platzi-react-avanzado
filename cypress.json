@@ -1,1 +1,7 @@
-{}
+{
+	"baseUrl": "https://petgram-curso-platzi-react-avanzado.didaquis.now.sh/",
+	"chromeWebSecurity": false,
+	"viewportWidth": 500,
+	"viewportHeight": 800
+
+}

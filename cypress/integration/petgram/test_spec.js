@@ -1,9 +1,20 @@
+/* global cy */
 
+describe('Petgram', () => {
 
-describe('test', () => {
+	it('está funcionando', () => {
+		cy.visit('/')
+	})
 
-	it('hola', () => {
-		expect(true).to.equal(true)
+	it('permite navegar a una categoría y ver fotografías', () => {
+		cy.visit('/pet/1')
+		cy.get('article')
+	})
+
+	it('permite navegar mediante navbar hasta la "home" de la app', () => {
+		cy.visit('/pet/1')
+		cy.get('nav a').first().click()
+		cy.url().should('be', '/')
 	})
 
 })
