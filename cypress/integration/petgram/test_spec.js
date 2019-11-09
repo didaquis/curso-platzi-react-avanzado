@@ -14,7 +14,7 @@ describe('Petgram', () => {
 	it('permite navegar mediante navbar hasta la "home" de la app', () => {
 		cy.visit('/pet/1')
 		cy.get('nav a').first().click()
-		cy.url().should('be', '/')
+		cy.url().should('include', '/')
 	})
 
 })
