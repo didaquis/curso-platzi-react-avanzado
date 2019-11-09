@@ -1,6 +1,6 @@
 {
   "name": "curso-platzi-react-avanzado",
-  "version": "0.4.74",
+  "version": "0.5.75",
   "description": "Repositorio con el código del [Curso Avanzado de React de Platzi](https://platzi.com/cursos/react-avanzado/)",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "now-build": "npm run build",
     "serve:dev": "webpack --mode 'development' && npx serve dist -s",
     "purge": "rm -fr ./dist/*",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "@babel/preset-react": "^7.6.3",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
+    "cypress": "^3.6.1",
     "eslint": "^6.6.0",
     "eslint-plugin-react": "^7.16.0",
     "html-webpack-plugin": "^3.2.0",
